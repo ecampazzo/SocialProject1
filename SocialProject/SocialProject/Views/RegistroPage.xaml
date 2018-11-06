@@ -12,49 +12,48 @@
                    HorizontalOptions="CenterAndExpand" /> -->
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
-                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+  
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    
 
                 </Grid.ColumnDefinitions>
                 <Image x:Name="fotoPerfil"
                    Source="defaultUser1.png" 
                    Grid.Row="0" 
-                   Grid.Column="1"
+                   Grid.Column="0"
                    VerticalOptions="Start"
                    HorizontalOptions="Center"
                    />
                 <Label x:Name="LocalPathLabel"
                     Text=""  
-                   Grid.Row="0" 
+                   Grid.Row="1" 
                    Grid.Column="0"
-                   VerticalOptions="Center"
+                   VerticalOptions="End"
                    HorizontalOptions="Center"
-                       FontSize="10"/>
+                       FontSize="10"
+                       IsVisible="False"/>
                 <Label x:Name="RemotePathLabel"
                     Text=""  
-                   Grid.Row="0" 
-                   Grid.Column="2"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                       FontSize="10"/>
-                <Button x:Name ="ButtonPick" 
-                   Text="Subir Foto"
                    Grid.Row="1" 
+                   Grid.Column="1"
+                   VerticalOptions="End"
+                   HorizontalOptions="Center"
+                       FontSize="10"
+                       IsVisible="False"/>
+                <Button x:Name ="ButtonPick" 
+                   Text="Seleccionar Foto"
+                   Grid.Row="2" 
                    Grid.Column="0"
                    VerticalOptions="End"
                    HorizontalOptions="Center"
@@ -64,8 +63,8 @@
                    />
                 <Button x:Name ="ButtonPicUp" 
                    Text="Subir Foto"
-                   Grid.Row="1" 
-                   Grid.Column="2"
+                   Grid.Row="2" 
+                   Grid.Column="1"
                    VerticalOptions="End"
                    HorizontalOptions="Center"
                    ScaleY="1"
@@ -75,39 +74,40 @@
 
             <Entry x:Name="Apellido"
                    Placeholder="Apellido" PlaceholderColor="Olive" 
-                   WidthRequest="120" 
-                   Grid.Row="2" 
-                   Grid.Column="1"
+                   WidthRequest="200" 
+                   Grid.Row="3" 
+                   Grid.Column="0"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
             <Entry x:Name="Nombre"
                    Placeholder="Nombre" PlaceholderColor="Olive" 
-                   IsPassword="False" WidthRequest="120" 
+                   IsPassword="False" WidthRequest="200" 
                    Grid.Row="3" 
                    Grid.Column="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
             <Entry x:Name="Email"
                    Placeholder="email" PlaceholderColor="Olive" 
-                   WidthRequest="120" 
+                   WidthRequest="200" 
                    Grid.Row="4" 
-                   Grid.Column="1"
+                   Grid.Column="0"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
             <Entry x:Name="Telefono"
                    Placeholder="Teléfono" PlaceholderColor="Olive" 
-                   IsPassword="False" WidthRequest="120" 
-                   Grid.Row="5" 
+                   IsPassword="False" WidthRequest="200" 
+                   Grid.Row="4" 
                    Grid.Column="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
                 <Picker x:Name="Sexo"
                         Title="Select a Sexo" 
 
-                        Grid.Row="6" 
-                     Grid.Column="1"
+                        Grid.Row="5" 
+                     Grid.Column="0"
                      VerticalOptions="Center"
-                     HorizontalOptions="Center" >
+                     HorizontalOptions="Center" 
+                       >
                     <Picker.Items>
                         <x:String>Masculino</x:String>
                         <x:String>Femenino</x:String>
@@ -116,13 +116,13 @@
                     
                     </Picker>
                 <Label Text="{Binding SelectedSexo.Name}"  
-                   Grid.Row="7" 
-                   Grid.Column="1"
+                   Grid.Row="5" 
+                   Grid.Column="0"
                    VerticalOptions="Center"
                    HorizontalOptions="Center" />
 
                 <DatePicker   x:Name="FechaNac"          
-                    Grid.Row="8" 
+                    Grid.Row="5" 
                     Grid.Column="1"                   
                     VerticalOptions="Center"    
                     HorizontalOptions="Center"
@@ -139,22 +139,22 @@
 />-->
                 <Entry x:Name="userName"
                    Placeholder="Username" PlaceholderColor="Olive" 
-                   WidthRequest="120" 
-                   Grid.Row="9" 
-                   Grid.Column="1"
+                   WidthRequest="200" 
+                   Grid.Row="6" 
+                   Grid.Column="0"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
             <Entry x:Name="password"
                    Placeholder="Password" PlaceholderColor="Olive" 
-                   IsPassword="True" WidthRequest="120" 
-                   Grid.Row="10" 
+                   IsPassword="True" WidthRequest="200" 
+                   Grid.Row="6" 
                    Grid.Column="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
 
             <Button x:Name ="ButtonRegistro" 
                    Text="Registrar"
-                   Grid.Row="11" 
+                   Grid.Row="7" 
                    Grid.Column="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>

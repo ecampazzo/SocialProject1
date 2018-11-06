@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="1.0.4" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     <PackageReference Include="MySqlConnector" Version="0.46.1.0" /> 

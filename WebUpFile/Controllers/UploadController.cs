@@ -8,7 +8,7 @@ namespace WebUpFile.Controllers
 {
     public class UploadController : ApiController
     {
-        [Route("api/files/Uploads   ")]
+        [Route("api/files/Upload")]
         public string PostFile()
         {
             try

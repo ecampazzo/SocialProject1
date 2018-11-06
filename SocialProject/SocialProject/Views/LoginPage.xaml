@@ -10,47 +10,70 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="45"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="70"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name ="buttonIng" 
-                   Grid.Row="0" 
-                   Grid.Column="0"
-                   Text="Ingresar"
-                   VerticalOptions="Start"
-                   HorizontalOptions="Fill"/>
+               
                 <Button x:Name ="buttonReg" 
-                   Grid.Row="0" 
-                   Grid.Column="2"
-                   Text="Registrarse"
+                   Grid.Row="6" 
+                   Grid.Column="1"
+                   Text="NUEVO USUARIO"
                    VerticalOptions="Start"
-                   HorizontalOptions="Fill"/>
+                   HorizontalOptions="Center"/>
+                
+    
+                <Image x:Name="fotoPerfil"
+                   Grid.Row="1" 
+                   Grid.Column="1"
+                   Source="{Binding FotoPerfil}" 
+                   VerticalOptions="Center"
+                   Aspect="Fill"
+                   HorizontalOptions="Center"
+                       />        
+               <Entry x:Name="userName"
+                   Grid.Row="3" 
+                   Grid.Column="1"
+                   Placeholder="Username" PlaceholderColor="Olive" 
+                   WidthRequest="120" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                <Entry x:Name="password"
+                   Grid.Row="4" 
+                   Grid.Column="1"
+                   Placeholder="Password" PlaceholderColor="Olive" 
+                   IsPassword="True" WidthRequest="120" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                <Button x:Name ="loginButton" 
+                   Grid.Row="5" 
+                   Grid.Column="1"
+                   Text="INGRESAR"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                <Label  x:Name="Saludo"
+                   Grid.Row="2" 
+                   Grid.Column="1"
+                   Text="Bienvenidos a SocialProject"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
             </Grid>
         <!--<Label x:Name="campoTexto"
                    Text="AyudArg te da la Bienvenida!!!" FontAttributes="Bold"
                    VerticalOptions="CenterAndExpand" 
                    HorizontalOptions="CenterAndExpand" /> -->
-        <Image x:Name="fotoPerfil"
-                   Source="defaultUser1.png" 
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"/>
-        <Entry x:Name="userName"
-                   Placeholder="Username" PlaceholderColor="Olive" 
-                   WidthRequest="120" 
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"/>
-        <Entry x:Name="password"
-                   Placeholder="Password" PlaceholderColor="Olive" 
-                   IsPassword="True" WidthRequest="120" 
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"/>
-        <Button x:Name ="loginButton" 
-                   Text="Login"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"/>
+
+
+
         
     </StackLayout>
 </ContentPage.Content>
