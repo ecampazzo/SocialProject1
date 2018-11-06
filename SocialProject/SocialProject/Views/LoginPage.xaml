@@ -37,7 +37,7 @@
                    Grid.Column="1"
                    Source="{Binding FotoPerfil}" 
                    VerticalOptions="Center"
-                   Aspect="Fill"
+                   Aspect="AspectFill"
                    HorizontalOptions="Center"
                        />        
                <Entry x:Name="userName"
