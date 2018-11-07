@@ -100,8 +100,8 @@
                    Grid.Column="1"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"/>
-                <Picker x:Name="Sexo"
-                        Title="Select a Sexo" 
+                <Picker x:Name="Persona"
+                        Title="Select tipo de persona" 
 
                         Grid.Row="5" 
                      Grid.Column="0"
@@ -109,13 +109,13 @@
                      HorizontalOptions="Center" 
                        >
                     <Picker.Items>
-                        <x:String>Masculino</x:String>
-                        <x:String>Femenino</x:String>
+                        <x:String>Persona Física</x:String>
+                        <x:String>Persona Jurídica</x:String>
                     </Picker.Items>
                     
                     
                     </Picker>
-                <Label Text="{Binding SelectedSexo.Name}"  
+                <Label Text="{Binding SelectedPersona.Name}"  
                    Grid.Row="5" 
                    Grid.Column="0"
                    VerticalOptions="Center"
@@ -153,7 +153,7 @@
                    HorizontalOptions="Center"/>
 
             <Button x:Name ="ButtonRegistro" 
-                   Text="Registrar"
+                   Text="Crear Cuenta"
                    Grid.Row="7" 
                    Grid.Column="1"
                    VerticalOptions="Center"

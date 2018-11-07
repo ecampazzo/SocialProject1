@@ -4,43 +4,199 @@
              x:Class="SocialProject.Views.ItemsPage"
               Title="{Binding Title}"
              x:Name="BrowseItemsPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="add.png"/>
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ItemsListView" 
-                ItemsSource="{Binding Items}"
-                VerticalOptions="FillAndExpand"
-                 HasUnevenRows="true"
-                 RefreshCommand="{Binding LoadItemsCommand}"
-                 IsPullToRefreshEnabled="true"
-                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
-                 CachingStrategy="RecycleElement"
-                 ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Text}" 
-                       LineBreakMode="NoWrap" 
-                       Style="{DynamicResource ListItemTextStyle}" 
-                       FontSize="16" />
-                                <Label Text="{Binding Description}" 
-                       LineBreakMode="NoWrap"
-                       Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+            <!--<Label x:Name="campoTexto"
+                   Text="AyudArg te da la Bienvenida!!!" FontAttributes="Bold"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" /> -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="13"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+
+                </Grid.ColumnDefinitions>
+                <Image x:Name="alimentos"
+                   Source="alimentos.png" 
+                   Grid.Row="0" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Alimentos"
+                    Text="Alimentos"  
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="children"
+                   Source="children.png" 
+                   Grid.Row="0" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Children"
+                    Text="Articulos para niños"  
+                   Grid.Row="1" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="personales"
+                   Source="personales.png" 
+                   Grid.Row="2" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Personales"
+                    Text="Articulos Personales"  
+                   Grid.Row="3" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="escuela"
+                   Source="escuela.png" 
+                   Grid.Row="2" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Escuela"
+                    Text="Articulos escolares"  
+                   Grid.Row="3" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="libros"
+                   Source="libros.png" 
+                   Grid.Row="4" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Libros"
+                    Text="Libros"  
+                   Grid.Row="5" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="mueble"
+                   Source="mueble.png" 
+                   Grid.Row="4" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Mueble"
+                    Text="Muebles"  
+                   Grid.Row="5" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="construccion"
+                   Source="construccion.png" 
+                   Grid.Row="6"
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Construccion"
+                    Text="Materiales de construcción"  
+                   Grid.Row="7" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="maquinas"
+                   Source="maquinas.png" 
+                   Grid.Row="6" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Maquinas"
+                    Text="Maquinas y equipos"  
+                   Grid.Row="7" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="plantas"
+                   Source="plantas.png" 
+                   Grid.Row="8" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Plantas"
+                    Text="Plantas y semillas"  
+                   Grid.Row="9"
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="servicios"
+                   Source="servicios.png" 
+                   Grid.Row="8" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Servicios"
+                    Text="Servicios"  
+                   Grid.Row="9"
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="electrodomesticos"
+                   Source="electrodomesticos.png" 
+                   Grid.Row="10" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Electrodomesticos"
+                    Text="Electrodomesticos"  
+                   Grid.Row="11" 
+                   Grid.Column="0"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+                <Image x:Name="dinero"
+                   Source="dinero.png" 
+                   Grid.Row="10" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"/>
+                <Label x:Name="Dinero"
+                   Text="Dinero"  
+                   Grid.Row="11" 
+                   Grid.Column="1"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   FontSize="10"/>
+
+
+            </Grid>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

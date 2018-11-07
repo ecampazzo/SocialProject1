@@ -171,4 +171,40 @@
   <ItemGroup>
     <BundleResource Include="Resources\defaultUser1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\alimentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\children.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\construccion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\electrodomesticos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\escuela.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\libros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\maquinas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mueble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\personales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\plantas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\servicios.png" />
+  </ItemGroup>
 </Project>

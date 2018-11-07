@@ -80,7 +80,7 @@ namespace SocialProject.Views
                 string email = Email.Text;
                 DateTime fechaNac = FechaNac.Date;
 
-                string sexo = Sexo.Items[Sexo.SelectedIndex];
+                string persona = Persona.Items[Persona.SelectedIndex];
                 string usuario = userName.Text;
                 string pass = password.Text;
                 string photo = RemotePathLabel.Text;
@@ -93,13 +93,13 @@ namespace SocialProject.Views
                     using (var cmd = new MySqlCommand())
                 {
                     cmd.Connection = conn;
-                    cmd.CommandText = "INSERT INTO usuarios (apellido,nombre,email,telefono,fechaNac,sexo,password,username,photo) VALUES (@apellido,@nombre,@email,@telefono,@fechaNac,@sexo,@user,@pass,@photo)";
+                    cmd.CommandText = "INSERT INTO usuarios (apellido,nombre,email,telefono,fechaNac,persona,password,username,photo) VALUES (@apellido,@nombre,@email,@telefono,@fechaNac,@persona,@user,@pass,@photo)";
                     cmd.Parameters.AddWithValue("apellido", apellido);
                     cmd.Parameters.AddWithValue("nombre", nombre);
                     cmd.Parameters.AddWithValue("telefono", telefono);
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("fechaNac", fechaNac);
-                    cmd.Parameters.AddWithValue("sexo", sexo);
+                    cmd.Parameters.AddWithValue("persona", persona);
                     cmd.Parameters.AddWithValue("user", usuario);
                     cmd.Parameters.AddWithValue("pass", pass);
                     cmd.Parameters.AddWithValue("photo", photo);
@@ -123,7 +123,7 @@ namespace SocialProject.Views
                 string email = Email.Text;
                 DateTime fechaNac = FechaNac.Date;
 
-                string sexo = Sexo.Items[Sexo.SelectedIndex];
+                string persona = Persona.Items[Persona.SelectedIndex];
                 string usuario = userName.Text;
                 string pass = password.Text;
                 string photo = RemotePathLabel.Text;
@@ -156,7 +156,7 @@ namespace SocialProject.Views
                     cmd.Parameters.AddWithValue("telefono", telefono);
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("fechaNac", fechaNac);
-                    cmd.Parameters.AddWithValue("sexo", sexo);
+                    cmd.Parameters.AddWithValue("persona", persona);
                     cmd.Parameters.AddWithValue("user", usuario);
                     cmd.Parameters.AddWithValue("pass", pass);
                     cmd.Parameters.AddWithValue("photo", photo);
