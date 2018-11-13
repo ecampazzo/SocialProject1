@@ -20,8 +20,10 @@ using System.Net.Http;
 namespace SocialProject.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class RegistroPage : ContentPage
     { private MediaFile _mediaFile;
+ 
         public RegistroPage()
         {
             NavigationPage.SetHasNavigationBar(this, false);
@@ -134,7 +136,7 @@ namespace SocialProject.Views
                 {
                     cmd.Connection = conn;
                     // cmd.CommandText = "INSERT INTO usuarios (username,password) VALUES (@user,@pass)";
-                    cmd.CommandText = "SELECT MAX(id) as MaxId FROM usuarios";
+                    cmd.CommandText = "SELECT MAX(idUsuario) as MaxId FROM usuarios";
                     reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
@@ -150,9 +152,9 @@ namespace SocialProject.Views
                 using (var cmd = new SqlCommand())
                 {
                     cmd.Connection = conn;
-                    cmd.CommandText = "INSERT INTO usuarios (id,apellido,nombre,email,telefono,fechaNac,sexo,password,username,photo) VALUES (@id,@apellido,@nombre,@email,@telefono,@fechaNac,@sexo,@user,@pass,@photo)";
+                    cmd.CommandText = "INSERT INTO usuarios (idUsuario,apellido,nombre,email,telefono,fechaNac,persona,password,username,photo) VALUES (@id,@apellido,@nombre,@email,@telefono,@fechaNac,@persona,@user,@pass,@photo)";
                     cmd.Parameters.AddWithValue("apellido", apellido);
-                    cmd.Parameters.AddWithValue("nombre", nombre);
+                    cmd.Parameters.AddWithValue("nombre", nombre);                                                       
                     cmd.Parameters.AddWithValue("telefono", telefono);
                     cmd.Parameters.AddWithValue("email", email);
                     cmd.Parameters.AddWithValue("fechaNac", fechaNac);
@@ -163,11 +165,11 @@ namespace SocialProject.Views
                     cmd.Parameters.AddWithValue("id", Id);
                     cmd.ExecuteNonQuery();
 
-                }
+                }                                                              
                 conn.Close();
 
             }}
-
+                                                                                                                                                                                                                 
 
 
 

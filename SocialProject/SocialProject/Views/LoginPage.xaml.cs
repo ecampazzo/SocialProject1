@@ -23,7 +23,7 @@ namespace SocialProject.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-
+        public int idUser;
         public LoginPage()
         {
             InitializeComponent();
@@ -94,6 +94,7 @@ namespace SocialProject.Views
                          passReturn = Convert.ToString(reader["password"]);
                         fotoFile = Convert.ToString(reader["photo"]);
                         nombre = Convert.ToString(reader["nombre"]);
+                        idUser = Convert.ToInt32(reader["idUsuario"]);
                     }
                     reader.Close();
 
