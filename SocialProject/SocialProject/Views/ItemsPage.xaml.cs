@@ -17,14 +17,24 @@ namespace SocialProject.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
-
+        private string Categoria;
         public ItemsPage()
         {
             InitializeComponent();
+            Inicializar();
 
 
         }
 
-       
+        private void Inicializar()
+        {
+            bAlimentos.Clicked += Alimentos_Clicked;
+           // children.
+        }
+
+        private void Alimentos_Clicked(object sender, EventArgs e)
+        {
+            Categoria = "Alimentos";
+        }
     }
 }

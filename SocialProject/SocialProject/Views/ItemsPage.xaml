@@ -37,10 +37,19 @@
 
 
                 </Grid.ColumnDefinitions>
-                <Image x:Name="alimentos"
-                   Source="alimentos.png" 
+                <Button x:Name="bAlimentos"
+                   
                    Grid.Row="0" 
                    Grid.Column="0"
+                   BackgroundColor="White"
+                   VerticalOptions="Fill"
+                   HorizontalOptions="Fill"/>
+                <Image x:Name="alimentos"
+                   Source="alimentos.png"
+                   
+                   Grid.Row="0" 
+                   Grid.Column="0"
+                   
                    VerticalOptions="Start"
                    HorizontalOptions="Center"/>
                 <Label x:Name="Alimentos"
