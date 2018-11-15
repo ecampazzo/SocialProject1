@@ -61,7 +61,8 @@ namespace SocialProject.Views
             var content = new MultipartFormDataContent();
             content.Add(new StreamContent(_mediaFile.GetStream()), "\"file\"",$"\"{_mediaFile.Path}\"");
             var httpClient = new HttpClient();
-            var uploadServiceBaseAddress = "http://socialproject.azurewebsites.net/api/Files/Upload";
+            var uploadServiceBaseAddress = "http://192.168.0.112/api/Files/Upload";
+          //  var uploadServiceBaseAddress = "http://socialproject.azurewebsites.net/api/Files/Upload";
                 /*/ "http://serverlocal:57320/api/files/Uploads";*/
             /*// http://localhost/files/Upload";*/
             var httpResponseMessage = await httpClient.PostAsync(uploadServiceBaseAddress, content);
@@ -114,7 +115,9 @@ namespace SocialProject.Views
         }
      
         private void cargaPerfilSql() {
-            var conString = "data source=socialproject.database.windows.net;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
+            var conString = "data source=192.168.0.112;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
+
+           // var conString = "data source=socialproject.database.windows.net;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
                                              //;Allow User Variables=tru @"data source=10.82.96.2;initial catalog=Empresa;user id=sa;password=tupassword;
             using (SqlConnection conn = new SqlConnection(conString))
             {

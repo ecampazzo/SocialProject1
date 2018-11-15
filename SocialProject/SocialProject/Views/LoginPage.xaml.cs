@@ -126,7 +126,9 @@ namespace SocialProject.Views
         private void loginSql()
         {
 
-            var conString = "data source=socialproject.database.windows.net;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
+            //var conString = "data source=socialproject.database.windows.net;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
+            var conString = "data source=192.168.0.112;user id=appuser;password=Pass1234Word;database=socialproject;Connect Timeout=60";
+
             //;Allow User Variables=tru @"data source=10.82.96.2;initial catalog=Empresa;user id=sa;password=tupassword;
 
 
@@ -176,9 +178,10 @@ namespace SocialProject.Views
                         //userName.Text = passReturn;
                         if (passReturn == pass)
                         {
-                            //userName.Text = "ok";
-                            fotoPerfil.Source = "https://socialproject.azurewebsites.net/" + foto;
-                            password.IsVisible = false;
+                        //userName.Text = "ok";
+                        //fotoPerfil.Source = "https://socialproject.azurewebsites.net/" + foto;
+                        fotoPerfil.Source = "https://192.168.0.112/" + foto;
+                        password.IsVisible = false;
                             userName.IsVisible = false;
 
                             buttonReg.IsVisible = false;
