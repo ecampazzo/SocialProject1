@@ -42,7 +42,7 @@
                    VerticalOptions="End"
                    HorizontalOptions="Center"
                        FontSize="10"
-                       IsVisible="False"/>
+                       IsVisible="True"/>
                 <Label x:Name="RemotePathLabel"
                     Text=""  
                    Grid.Row="1" 
@@ -50,7 +50,7 @@
                    VerticalOptions="End"
                    HorizontalOptions="Center"
                        FontSize="10"
-                       IsVisible="False"/>
+                       IsVisible="True"/>
                 <Button x:Name ="ButtonPick" 
                    Text="Seleccionar Foto"
                    Grid.Row="2" 
